@@ -109,6 +109,7 @@ As the product has evolved from an internal tool running in our internal network
 * [Node.js](https://nodejs.org/) 8.x **required** (some dependencies don't support newer versions)
 * [ADB](http://developer.android.com/tools/help/adb.html) properly set up
 * [RethinkDB](http://rethinkdb.com/) >= 2.2
+* [CMake](https://cmake.org/) >= 3.9 (for [node-jpeg-turbo](https://github.com/julusian/node-jpeg-turbo#readme))
 * [GraphicsMagick](http://www.graphicsmagick.org/) (for resizing screenshots)
 * [ZeroMQ](http://zeromq.org/) libraries installed
 * [Protocol Buffers](https://github.com/google/protobuf) libraries installed
@@ -120,12 +121,13 @@ Note that you need these dependencies even if you've installed STF directly from
 On Mac OS, you can use [homebrew](http://brew.sh/) to install most of the dependencies:
 
 ```bash
-brew install rethinkdb graphicsmagick zeromq protobuf yasm pkg-config
+brew install rethinkdb graphicsmagick zeromq protobuf yasm pkg-config cmake
 ```
 
 On Windows you're on your own. In theory you might be able to get STF installed via [Cygwin](https://www.cygwin.com/) or similar, but we've never tried. In principle we will not provide any Windows installation support, but please do send a documentation pull request if you figure out what to do.
 
 We also provide a [Docker](http://docker.com/) container in the [Docker Hub](https://hub.docker.com/) as [devicefarmer/stf](https://registry.hub.docker.com/u/devicefarmer/stf/). You can use our [Dockerfile](Dockerfile) as guidance if you'd prefer to do the installation yourself.
+An example standalone [docker-compose.yaml](docker-compose.yaml) file is also provided.
 
 You should now be ready to [build](#building) or [run](#running) STF.
 
